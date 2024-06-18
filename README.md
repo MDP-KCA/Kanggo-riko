@@ -42,3 +42,36 @@ Before running this script, ensure you have the following installed:
 ## Ensure your Polygon (Matic) RPC URL and API key are valid and accessible.
 ## Make sure each address in drain_from_addresses holds ERC-20 tokens you intend to transfer.
 ## Monitor gas prices and adjust gas and gasPrice parameters in the script as needed for successful transactions.
+
+
+
+## service 
+
+  ```bash
+sudo tee /etc/systemd/system/kanggo-rico.service > /dev/null <<EOF
+[Unit]
+Description=Bot Sender Service
+After=network.target
+
+[Service]
+Type=simple
+User=root
+Group=root
+WorkingDirectory=/root/kanggo-rico
+ExecStart=/usr/bin/python3 /root/kanggo-rico/run.py
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
+EOF
+ ```
+
+
+  ```bash
+sudo systemctl daemon-reload
+sudo systemctl enable kanggo-rico.service
+sudo systemctl start kanggo-rico.service
+sudo systemctl status kanggo-rico.service
+
+ ```
