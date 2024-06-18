@@ -1,0 +1,11 @@
+{
+  "private_key": "YOUR_PRIVATE_KEY",
+  "my_address": "YOUR_ADDRESS",
+  "token_address": "TOKEN_ADDRESS",
+  "drain_from_addresses": ["WALLET_1", "WALLET_2", "WALLET_3", "WALLET_4"],
+  "target_address": "TARGET_WALLET",
+  "api_key": "YOUR_API_KEY",
+  "scan_api_url": "https://api.polygonscan.com/api",
+  "rpc_url": "YOUR_RPC_URL",
+  "chain_id": 137
+}
